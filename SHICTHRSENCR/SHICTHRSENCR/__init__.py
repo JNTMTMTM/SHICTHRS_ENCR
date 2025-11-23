@@ -9,6 +9,8 @@ import os
 from colorama import init
 init()
 from .utils.hash.SHRENCR_get_hash_code import get_hash_code
+from .utils.base64.SHRENCR_en_base64_code import en_base64_code
+from .utils.base64.SHRENCR_de_base64_code import de_base64_code
 
 print('\033[1mWelcome to use SHRENCR - ENCR System\033[0m\n|  \033[1;34mGithub : https://github.com/JNTMTMTM/SHICTHRS_ENCR\033[0m')
 print('|  \033[1mAlgorithms = rule ; Questioning = approval\033[0m')
@@ -25,4 +27,16 @@ def SHRENCR_get_hash_code(org_code : str) -> str:
     try:
         return get_hash_code(org_code)
     except Exception as e:
-        raise SHRENCRException(f"SHRENCR [ERROR.1001] unable to get hash code. | {e}")
+        raise SHRENCRException(f"SHRENCR [ERROR.3000] unable to get hash code. | {e}")
+
+def SHRENCR_en_base64_code(org_code : str) -> str:
+    try:
+        return en_base64_code(org_code)
+    except Exception as e:
+        raise SHRENCRException(f"SHRENCR [ERROR.3001] unable to encrypt base64 code. | {e}")
+
+def SHRENCR_de_base64_code(en_code : str) -> str:
+    try:
+        return de_base64_code(en_code)
+    except Exception as e:
+        raise SHRENCRException(f"SHRENCR [ERROR.3002] unable to decrypt base64 code. | {e}")
