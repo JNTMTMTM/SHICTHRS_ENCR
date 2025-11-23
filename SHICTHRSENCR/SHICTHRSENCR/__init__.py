@@ -8,7 +8,7 @@
 import os
 from colorama import init
 init()
-from .utils.SHRENCR_get_hash_code import get_hash_code
+from .utils.hash.SHRENCR_get_hash_code import get_hash_code
 
 print('\033[1mWelcome to use SHRENCR - ENCR System\033[0m\n|  \033[1;34mGithub : https://github.com/JNTMTMTM/SHICTHRS_ENCR\033[0m')
 print('|  \033[1mAlgorithms = rule ; Questioning = approval\033[0m')
