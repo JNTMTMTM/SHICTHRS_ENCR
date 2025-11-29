@@ -24,7 +24,7 @@ __all__ = ['SHRENCR_get_hash_code' , 'SHRENCR_get_file_hash_code' , 'SHRENCR_get
             'SHRENCR_en_base64_code' , 'SHRENCR_de_base64_code' , 'SHRENCR_check_identity_number' ,
             'SHRENCR_check_chinese_text']
 
-class SHRENCRException(BaseException):
+class SHRENCRException(Exception):
     def __init__(self , message: str) -> None:
         self.message = message
     
